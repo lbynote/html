@@ -1,0 +1,139 @@
+标题
+<h1>h1</h1>
+<h2>h2</h2>
+<h3>h3</h3>
+<h4>h4</h4>
+<h5>h5</h5>
+<h6>h6</h6>
+
+水平线
+<hr />
+
+注释
+<!-- this is a comment -->
+
+段落
+<p>This is a paragraph</p>
+<p>This is another paragraph</p>
+
+折行
+<br />
+
+样式实例：背景颜色
+<h1 style="background-color: red;">this is a heading</h1>
+
+样式实例：字体、颜色、尺寸
+<h1 style="font-family:arial;color:red;font-size:20px;">this is a heading</h1>
+
+样式实例：文本对齐
+<h1 style="text-align:center;">this is a heading</h1>
+
+文本格式化：粗体
+<b>this text is bold</b>
+
+文本格式化：斜体
+<i>this text is italic</i>
+
+文本格式化：上标
+this text contains <sup>supscript</sup>
+
+文本格式化:下标
+this text contains <sub>subscript</sub>
+
+预格式文本
+<pre>
+     预格式文本
+     保留空格和换行
+</pre>
+
+短引用
+<q>短引用</q>
+
+长引用
+<blockquote>
+    长引用，长引用。。。。。。
+</blockquote>
+
+代码格式
+<pre>
+    <code>
+        for (int i = 1; i <= 10; i++) {
+            sum++;
+        }
+    </code>
+</pre>
+
+注释
+<!-- 这是注释 -->
+
+链接
+<a href="http://www.github.com">github</a>
+
+链接在新窗口打开
+<a href="http://www.github.com" target="_blank">github</a>
+
+链接命名锚
+创建指向该锚的连接：
+<a href="#tip">指向锚</a>
+
+创建锚：
+<a name="tip">创建锚</a>
+
+图像
+<img src="1.jpg" />
+
+表格
+<table border="1">
+    <!--显示边框-->
+    <tr>
+        <th>heading1</th>
+        <!--表头-->
+        <th>heading2</th>
+    </tr>
+    <tr>
+        <td>row1 cell1</td>
+        <td>row1 cell2</td>
+    </tr>
+    <tr>
+        <td>row2 cell1</td>
+        <td>row2 cell2</td>
+    </tr>
+</table>
+
+无序列表
+<ul>
+    <li>L1</li>
+    <li>L2</li>
+</ul>
+
+有序列表
+<ol>
+    <li>L1</li>
+    <li>L2</li>
+</ol>
+
+块元素(block level element)在浏览器显示时，通常会以新行来开始（和结束）。<br />
+内联元素(inline element)在显示时通常不会以新行开始。<br />
+
+<pre>
+    &ltdiv&gt元素是块元素，是可用于组合其他HTML元素的容器。
+    &ltspan&gt元素是内联元素，可用作文本的容器。
+</pre>
+
+类：分类块级元素
+<style>
+    .cities {
+        background-color: red;
+    }
+</style>
+<div class="cities">
+    <h1>Beijing</h1>
+</div>
+
+类：分类行内元素
+<style>
+    span.red {
+        color: red;
+    }
+</style>
+<h1>my <span class="red">import</span> heading</h1>
