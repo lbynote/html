@@ -137,3 +137,296 @@ this text contains <sub>subscript</sub>
     }
 </style>
 <h1>my <span class="red">import</span> heading</h1>
+
+使用&ltdiv&gt元素的HTML布局
+<style>
+    #header {
+        background-color: balck;
+        color: write;
+        test-align: center;
+        paddingh: 5px;
+    }
+
+    #nav {
+        line-height: 30px;
+        background-color: #eeeeee;
+        height: 300px;
+        width: 100px;
+        float: left;
+        padding: 5px;
+    }
+
+    #section {
+        width: 350px;
+        float: left;
+        padding: 10px;
+    }
+
+    #footer {
+        background-color: black;
+        color: white;
+        clear: both;
+        text-align: center;
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <div id="header">
+        <h1>City Gallery</h1>
+    </div>
+
+    <div id="nav">
+        London<br />
+        Paris<br />
+        Tokyo<br />
+    </div>
+
+    <div id="section">
+        <h1>London</h1>
+        <p>
+            London is teh captial city of England.
+        </p>
+        <p>
+            Standing on teh Raiver Thames.
+        </p>
+    </div>
+
+    <div id="footer">
+        Copyright ...
+    </div>
+</body>
+
+使用HTML5的网站布局
+<style>
+    header {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 5px;
+    }
+
+    nav {
+        line-height: 30px;
+        background-color: #eeeeee;
+        height: 300px;
+        width: 100px;
+        float: left;
+        padding: 5px;
+    }
+
+    section {
+        width: 350px;
+        float: left;
+        padding: 10px;
+    }
+
+    footer {
+        background-color: black;
+        color: white;
+        clear: both;
+        text-align: center;
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>City Gallery</h1>
+    </header>
+
+    <nav>
+        London<br />
+        Paris<br />
+        Tokyo<br />
+    </nav>
+
+    <section>
+        <h1>London</h1>
+        <P>
+            London is the capital city of England.
+        </P>
+        <P>
+            Standing on the River Thames.
+        </P>
+    </section>
+
+    <footer>
+        Copyright ...
+    </footer>
+</body>
+
+使用表格的HTML布局
+<style>
+    table.lamp {
+        width: 100%;
+        border: 1px solid #d4d4d4;
+    }
+
+    table.lamp th,
+    td {
+        padding: 10px;
+    }
+
+    table.lamp td {
+        width: 40px;
+    }
+</style>
+
+<body>
+    <table class="lamp">
+        <tr>
+            <th>
+                Heading
+            </th>
+            <td>
+                The tale element was not designed to be a layout tool.
+            </td>
+        </tr>
+    </table>
+</body>
+
+创建自定义响应式设计
+
+<head>
+    <style>
+        .city {
+            float: left;
+            margin: 5px;
+            padding: 15px;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="city">
+        <h1>London</h1>
+        <p>London</p>
+    </div>
+
+    <div class="city">
+        <h1>Paris</h1>
+        <p>Paris</p>
+    </div>
+
+    <div class="city">
+        <h1>Tokyo</h1>
+        <p>Tokyo</p>
+    </div>
+</body>
+
+使用Bootstrap框架创建响应式设计
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Heading</h1>
+            <p>paragraph</p>
+        </div>
+    </div>
+
+    <div class="contain">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>London</h2>
+                <p>London</p>
+            </div>
+
+            <div class="col-md-4">
+                <h2>Paris</h2>
+                <p>Paris</p>
+            </div>
+
+            <div class="col-md-4">
+                <h2>Tokyo</h2>
+                <p>Tokyo</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+框架
+<!--frameset和body不能同时使用，所以这里不会显示框架-->
+<frameset cols="25%, 75%">
+    <frame src="a.html"></frame>
+    <frame src="b.html"></frame>
+</frameset>
+
+内联框架
+<iframe src="a.html"></iframe>
+
+内联框架：设置高度和宽度
+<iframe src="a.html" width="200" height="200"></iframe>
+
+内联框架：删除边框
+<iframe src="a.html" frameborder="0"></iframe>
+
+背景
+<!--精神污染，注释掉了-->
+<!--
+<body background="1.jpg">
+    <h1>heading</h1>
+</body>
+-->
+
+script元素
+<script type="text/javascript">
+    document.write("Hello World!")
+</script>
+
+&lthead&gt元素是所有头部元素的容器，可包含脚本，只是浏览器在何处可以找到样式表，提供元信息等。
+
+头部
+
+<head>
+    <!-- <title>定义文档的标题 -->
+    <title>Title</title>
+    <!-- <base>为页面上的所有链接规定默认地址或默认目标(target) -->
+    <!--<base href="http://www.github.com/" /> -->
+    <!--<base terget="_blank" />-->
+
+    <!-- <link>定义文档与外部资源之间的关系，最常用于连接样式表 -->
+    <link rel="stylesheet" tyle="text/css" href="mystyle.css" />
+    <!-- <style>用于为HTML文档定义样式信息 -->
+    <style>
+        body {
+            background-color: white;
+        }
+    </style>
+    <!-- <meta>提供关于HTML文档的元数据，典型情况是被用于规定页面的描述、关键词、文档的作者、最后修改时间以及其他元数据 -->
+    <!-- 定义页面的描述 -->
+    <meta name="description" content="web on HTML, CSS, XML" />
+    <!-- 定义页面的关键词 -->
+    <meta name="keywords" content="HTML, CSSS, XML" />
+    <!-- <script>定义客户端脚本 -->
+</head>
+
+实体
+在HTML中，有些字符是预留的，如果希望正确地显示预留字符，必须在HTML源代码中使用字符实体(character entities)。
+常用字符实体：
+<img src="字符实体.jpg" />
+
+URL
+语法规则：scheme://host.domain:port/path/filename
+解释：
+scheme：定义因特网服务的类型。最常见的是http。
+host：定义域主机（http的默认主机是www）。
+domain：定义因特网域名。
+port：定义主机上的端口号（http的默认端口号是80）。
+path：定义服务器上的路径（如果省略，则文档必须位于网站的根目录中）。
+filename：定义文档/资源的名称。
+
+&lt!DOCTYPE&gt不是HTML标签，它为浏览器提供一项信息（声明），即HTML是用声明版本编写的。
+&lt!DOCTYPE&gt即HTML5声明。
