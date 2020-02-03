@@ -1,0 +1,153 @@
+&ltform&gt元素用于定义表单
+表单元素指的是不同类型的input元素、复选框、单选按钮、提交按钮等。
+
+&ltinput&gt元素是最重要的表单元素，根据不同的type属性，有很多形态。
+
+文本输入
+<form>
+    First name:<br />
+    <input type="text" name="firstname">
+</form>
+
+单选按钮输入
+<form>
+    <input type="radio" name="sex" value="male" checked>Male
+    <br />
+    <input type="radio" name="sex" value="female">Female
+</form>
+
+提交按钮
+<form>
+    <input type="submit" value="Submit">
+</form>
+
+Action属性定义提交表单时执行的动作。
+向服务器提交表单的通常做法是使用提交按钮。
+通常，表单会被提交到web服务器上的网页。
+如：指定某个服务器脚本来处理被提交的表单
+<form action="action_page.php"></form>
+如果省略action属性，则action会被设置为当前页面。
+
+method属性规定在提交表单时所用的HTTP方法(GET或POST)
+<form action="action_page.php" method="GET"></form>
+
+使用GET（默认方法）的情况：
+提交表单是被动的（如搜索引擎查询），并且没有敏感信息。
+使用GET时，表单数据在页面地址栏是可见的。
+GET最适合少量数据的提交。
+
+使用POST的情况：
+表单正在更新数据，或者包含敏感信息（例如密码）。
+POST的安全性更加，因为在页面地址栏中被提交的数据是不可见的。
+
+Name属性：
+如果要被正确地提交，每个输入字段必须设置一个name属性。
+
+&ltfieldset&gt元素组合表单中的相关数据。
+&ltlegend&gt元素为&ltfieldset&gt元素定义标题。
+<form>
+    <fieldset>
+        <legend>Personal information:</legend>
+        Fiest name:<br />
+        <input type="text" name="firstnane" value="FN">
+        <br />
+        Last name:<br />
+        <input type="text" name="lastname" value="LN">
+        <br />
+        <input type="submit" value="Submit">
+    </fieldset>
+</form>
+
+&ltselect&gt元素（下拉列表）
+&ltoption&gt元素定义待选择的选项。
+通常把首个选项显示为被选选项，也可以通过selected属性来定义预定义选项。
+<form>
+    <select name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab" selected>Saab</option>
+        <option value="fiat">Fiat</option>
+    </select>
+</form>
+
+&lttextarea&gt元素定义多行输入字段（文本域）
+<form>
+    <textarea name="message" rows="10" cols="30">
+        textarea
+    </textarea>
+</form>
+
+&ltbutton&gt元素定义可点击的按钮
+<form>
+    <button type="button" onclick="alert('Hello World')">Click</button>
+</form>
+
+&ltinput&gt元素的输入类型：text
+定义供文本输入的单行输入字段:
+<form>
+    <input type="text" name="firstname">
+</form>
+
+&ltinput&gt元素的输入类型：password
+password字段中的字符会被做掩码处理（显示为星号或实心圆）。
+<form>
+    <input type="password" name="psw">
+</form>
+
+&ltinput&gt元素的输入类型：submit
+定义提交表单数据至表单处理程序的按钮。
+<form>
+    <input type="submit" value="Submit">
+</form>
+
+&ltinput&gt元素的输入类型：radio
+定义单选按钮
+<form>
+    <input type="radio" name="sex" value="male" checked>Male
+    <br />
+    <input type="radio" name="sex" value="female">Female
+</form>
+
+&ltinput&gt元素的输入类型：checkbox
+定义复选框
+<form>
+    <input type="checkbox" name="vehicle" value="Bike">I have a Bike
+    <br />
+    <input type="checkbox" name="vehicle" value="Car">I have a car
+</form>
+
+&ltinput&gt元素的输入类型：button
+定义按钮
+<form>
+    <input type="button" onclick="alert('Hello World')" value="Click">
+</form>
+
+&ltinput&gt属性：value
+规定输入字段的初始值
+<form>
+    <input type="text" name="firstname" value="FN">
+</form>
+
+&ltinput&gt属性：readonly
+规定输入字段为只读
+<form>
+    <input type="text" name="firstname" value="FN" readonly>
+</form>
+
+&ltinput&gt属性:disabled
+规定输入字段是禁用的。
+被禁用的元素是不可用和、不可点击、不会被提交的。
+<form>
+    <input type="text" name="firstname" value="FN" disabled>
+</form>
+
+&ltinput&gt属性：size
+规定输入字段的尺寸（以字符计）
+<form>
+    <input type="text" name="firstname" value="FN" size="40">
+</form>
+
+&ltinput&gt属性：maxlength
+规定输入字段允许的最大长度
+<form>
+    <input type="text" name="firstname" value="FN" maxlength="10">
+</form>
