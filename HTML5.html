@@ -1,0 +1,109 @@
+什么是HTML5：
+- HTML5是最新的HTML标准。
+- HTML5是专门为承载丰富的web内容而设计的，并且无需额外的插件。
+- HTML5拥有新的语义、图形以及多媒体元素。
+- HTML5提供的新元素和新的API简化了web应用程序的搭建。
+- HTML5是跨平台的，被设计为在不同类型的硬件（PC、平板、手机、电视机等等）之上运行。
+
+HTML5的新的文档类型(DOCTYPE)声明非常简单：
+<!DOCTYPE html>
+<meta charset="UTF-8">
+HTML5中默认的字符编码是UTF-8。
+
+HTML5新特性：
+- 新的语义元素，比如&lthead&gt， &ltfooter&gt， &ltarticle&gt，&ltsection&gt
+- 新的表单控件，比如数字、日期、时间、日历和滑块。
+- 强大的图像支持（借由&ltcanvas&gt和&ltsvg&gt）
+- 强大的多媒体支持（借由&ltvideo&gt和&ltaudio&gt）
+- 强大的新API，比如用本地存储代替cookie
+
+IE8以及更早的版本，不允许对未知元素添加样式。
+“HTML5 Enabling JavaScript”，“the shiv”能使IE9的早期版本读取（并理解它）
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+HTML5语义元素
+语义元素清楚地向浏览器和开发者描述其意义。
+非语义元素的例子：&ltdiv&gt和&ltspan&gt--无法它提供关于其内容的信息。
+语义元素的例子：&ltform&gt、&lttable&gt、&ltimg&gt--清晰地定义其内容。
+
+section元素
+定义文档中的节（节是有主题的内容组，通常具有标题）。
+可以将网站首页划分为简介、内容、联系信息等节。
+<section>
+  <h1>WWF</h1>
+  <p>The World Wide Fund for Nature</p>
+</section>
+
+article元素
+规定独立的自包含内容。
+文档有其自身的意义，并且可以独立于网站其他内容进行阅读。
+应用场景：论坛、博客、新闻。
+<article>
+  <h1>heading</h1>
+  <p>paragragh</p>
+</article>
+
+header元素
+为文档或节规定也页眉，应该被用作介绍性内容的容器。
+<article>
+  <header>
+    <h1>heading</h1>
+    <p>mission:</p>
+  </header>
+  <p>
+    mission details
+  </p>
+</article>
+
+footer元素
+为文档或节规定页脚，应该提供有关包含元素的信息。
+通常包含文档的作者、版权信息、使用条款链接、联系信息等等。
+可以在一个文档中使用多个&ltfooter&gt元素。
+<footer>
+  <p>Posted by: Isaac</p>
+  <p>Contact information: ...</p>
+</footer>
+
+nav元素
+定义导航链接集合。
+旨在为定义大型的导航链接块，不过并非所有连接都应该位于&ltnav&gt元素中。
+<nav>
+  <a href="/html/">HTML</a>
+  <a href="/css/">CSS</a>
+</nav>
+
+aside元素
+定义主内容之外的某些内容（比如侧栏），aside内容应该与周围内容有关。
+<aside>
+  <h4>heading</h4>
+  <p>paragraph</p>
+</aside>
+
+figure和figcaption元素
+标题(caption)的作用是为图片添加可见的解释。
+通过HTML5，图片和标题能够被组合在&ltfigure&gt元素中。
+<figure>
+  <img src="1.jpg">
+  <figcaption>hhh</figcaption>
+</figure>
+
+HTML5代码约定
+- 正确的文档类型
+<!DOCTYPE html>
+- 小写的元素名
+- 关闭所有HTML元素
+- 关闭空的HTML元素
+- 使用小写的属性名
+- 属性值加引号
+- 书写必须的属性，比如图像的alt属性
+- 精减等号两边的空格
+- 避免长代码行，尽量避免代码行超过80个字符
+- 使用空行来分隔大型或逻辑代码块
+- 使用两个空格的缩进，避免使用TAB
+- 不推荐省略&lthtml&gt和&ltbody&gt
+- 能够省略&lthead&gt
+- &lttitle&gt是必须的
+- 短注释之间增加一个空格
+<!-- this is a commit -->
